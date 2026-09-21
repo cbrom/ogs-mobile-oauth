@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>OGS Mobile sign-in</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:0;padding:48px 24px;text-align:center;color:#202020;background:#ffffff}
+a{display:inline-block;margin-top:24px;padding:14px 24px;border-radius:12px;background:#2480ff;color:#ffffff;text-decoration:none;font-weight:700}
+</style>
+</head>
+<body>
+<p>Returning to OGS Mobile…</p>
+<a id="open" href="#">Open OGS Mobile</a>
+<script>
+(function () {
+  var target = 'ogsmobile://oauth-callback' + window.location.search;
+  document.getElementById('open').setAttribute('href', target);
+  window.location.replace(target);
+})();
+</script>
+</body>
+</html>
+
